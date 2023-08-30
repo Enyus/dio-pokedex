@@ -1,8 +1,10 @@
 
 class Pokemon {
-    number;
-    name;
-    type;
-    types = [];
-    photo;
+    constructor () {
+        this.number;
+        this.name;
+        this.type;
+        this.types = [];
+        this.photo;
+    }
 }
