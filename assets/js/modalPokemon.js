@@ -83,3 +83,26 @@ arrayStatsTitulo.map( elementoHTML => {
         arrayAbasDesc[arrayStatsTitulo.indexOf(evento.target)].classList.add("item__ativo");
     })
 })
+
+async function pegarEvolucoes (idDoPokemon) {
+    let evolutions = []
+
+    const evolutionChainURL = await fetch(`https://pokeapi.co/api/v2/pokemon-species/${idDoPokemon}`)
+                                        .then(response => response.json())
+                                        .then(species => species.evolution_chain.url)
+    
+    await fetch(evolutionChainURL)
+            .then(response => response.json())
+            .then(response => {
+                evolution0 = response.chain.species.name;
+                evolutions.push(evolution0);
+                if (response.chain.evolves_to.length > 0) {
+                    evolution1 = response.chain.evolves_to[0].species.name;
+                    evolutions.push(evolution1)
+                    if (response.chain.evolves_to[0].evolves_to.length > 0) {
+                        evolution2 = response.chain.evolves_to[0].evolves_to[0].species.name;
+                        evolutions.push(evolution2)
+                    }
+                }
+            } )
+}

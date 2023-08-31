@@ -9,6 +9,10 @@ O desafio consiste em pegar o código previamente feito em curso, pelo expert [R
 
 O intuito final é fazer um aplicativo do tipo Pokedex (cujo design foi pego [deste dribble](https://dribbble.com/shots/6540871-Pokedex-App)), aquele equipamento do anime Pokemon que mostrava as informações de um dos "bichinhos de bolso" até hoje amados por muitos. Para isso, além do HTML, CSS e JS iniciais disponibilizados pelo expert, usou-se a [PokeAPI](https://pokeapi.co/), que apresenta diversas informações sobre pokemons através da url: ```https://pokeapi.co/api/v2/pokemon/<numero do pokemon>```.
 
+Para o meu infortúnio, porém, apenas uma chamada da API não é suficiente para consegur todas as informações para as telas acima (pelo menos não para a aba Evolutions), então tive que recorrer a outros dois endpoints da PokeAPI:
+- ```https://pokeapi.co/api/v2/pokemon-species/<numero do pokemon>``` - este endpoint permite consultar a "Evolution Chain" de um determinado pokemon, na verdade, apenas dá a URL de outro endpoint que, este sim, dá as informações das evoluções do pokemon.
+- ```https://pokeapi.co/api/v2/evolution-chain/<id da evolution chain>``` - este endpoint, veja que ele não depende do id/numero/nome do pokemon, apresenta os nomes das evoluções do pokemon, se existentes. Com estes, tive que fazer novas chamadas no primeiro endpoint para conseguir a imagem das evoluções.
+
 ## 🛠 Teconologias Utilizadas
 ![HTML5](https://img.shields.io/badge/HTML5-000?style=for-the-badge&logo=html5)
 ![CSS3](https://img.shields.io/badge/CSS3-000?style=for-the-badge&logo=css3&logoColor=264CE4)
