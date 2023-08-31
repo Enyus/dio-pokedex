@@ -1,0 +1,26 @@
+.evo__title {
+    margin-top: 0;
+}
+
+.evo__row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+}
+
+.evo__cell {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.evo__cell--pointer {
+    color: lightgray;
+    font-size: 2rem;
+}
+
+.pokemon__evo--imagem {
+    width: 100%;
+}
