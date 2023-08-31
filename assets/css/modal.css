@@ -48,6 +48,11 @@
     width: 100%;
 }
 
+.pokemon__stats ol {
+    list-style: none;
+    padding: 0;
+}
+
 .pokemon__stats--imagem {
     width: 50%;
     position: relative;
@@ -55,11 +60,40 @@
     transform: translateX(50%);
 }
 
-.stats__lista {
+.stats__headers {
     position: relative;
     top: -35%;
     margin: 0;
     list-style-type: none;
-    padding: 0 1rem;
+    padding: 1rem;
     display: flex;
+    justify-content: space-between;
+}
+
+.stats__item--titulo {
+    color: lightgray;
+    padding-bottom: 1rem;
+}
+
+.item__ativo {
+    color: black;
+    border-bottom: 2px solid purple;
+}
+
+.description__lista {
+    position: relative;
+    top: -35%;
+    margin: 0;
+    list-style: none;
+    padding: 1rem;
+}
+
+.description__lista li {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    padding-bottom: 1rem;
+}
+
+.description__lista li label {
+    color: lightgray;
 }
