@@ -14,15 +14,15 @@
 }
 
 .pokemon__stats--imagem {
-    width: 12rem;
+    height: 100%;
+    max-width: 225px;
     position: relative;
     top: -30%;
-    transform: translateX(60%);
+    z-index: 1;
+    justify-self: flex-end;
 }
 
 .stats__headers {
-    position: relative;
-    top: -35%;
     margin: 0;
     list-style-type: none;
     padding: 1rem;
@@ -30,9 +30,14 @@
     justify-content: space-between;
 }
 
+.stats__headers li {
+    cursor: pointer;
+    z-index: 2;
+}
+
 .stats__item--titulo {
     color: lightgray;
-    padding-bottom: 1rem;
+    padding: 1rem 0;
     display: block;
     min-width: 80px;
     text-align: center;
@@ -40,5 +45,5 @@
 
 .stats__item--titulo.item__ativo {
     color: black;
-    border-bottom: 2px solid purple;
+    border-bottom: 4px solid purple;
 }
