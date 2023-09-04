@@ -21,6 +21,10 @@
     font-size: 2rem;
 }
 
+.evo__cell span:first-of-type {
+    text-transform: capitalize;
+}
+
 .pokemon__evo--imagem {
-    width: 100%;
+    max-width: 50%;
 }

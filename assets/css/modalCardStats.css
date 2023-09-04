@@ -15,7 +15,7 @@
 
 .pokemon__stats--imagem {
     height: 100%;
-    max-width: 225px;
+    max-width: 50%;
     position: relative;
     top: -30%;
     z-index: 1;
@@ -41,6 +41,7 @@
     display: block;
     min-width: 80px;
     text-align: center;
+    background: rgba(255, 255, 255, 0.9);
 }
 
 .stats__item--titulo.item__ativo {

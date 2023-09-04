@@ -13,6 +13,8 @@ Para o meu infortúnio, porém, apenas uma chamada da API não é suficiente par
 - ```https://pokeapi.co/api/v2/pokemon-species/<numero do pokemon>``` - este endpoint permite consultar a "Evolution Chain" de um determinado pokemon, na verdade, apenas dá a URL de outro endpoint que, este sim, dá as informações das evoluções do pokemon.
 - ```https://pokeapi.co/api/v2/evolution-chain/<id da evolution chain>``` - este endpoint, veja que ele não depende do id/numero/nome do pokemon, apresenta os nomes das evoluções do pokemon, se existentes. Com estes, tive que fazer novas chamadas no primeiro endpoint para conseguir a imagem das evoluções.
 
+Como custo disso, além de ter sido consideravelmente difícil conseguir povoar a aba de evoluções (já que o resultado estava vindo antes da resolução da promise, por algum motivo que não descobri), a performance do App está péssima, sendo que muitas vezes as imagens de alguns pokemons na aba de evolução não carregam de jeito nenhum.
+
 ## 🛠 Teconologias Utilizadas
 ![HTML5](https://img.shields.io/badge/HTML5-000?style=for-the-badge&logo=html5)
 ![CSS3](https://img.shields.io/badge/CSS3-000?style=for-the-badge&logo=css3&logoColor=264CE4)
